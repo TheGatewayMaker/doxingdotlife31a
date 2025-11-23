@@ -61,5 +61,48 @@ export function createServer() {
   app.get("/api/posts", handleGetPosts);
   app.get("/api/servers", handleGetServers);
 
+  // Media proxy endpoint for additional CORS support
+  app.get("/api/media/:postId/*", async (req, res) => {
+    try {
+      const { postId } = req.params;
+      const filePath = req.params[0];
+
+      if (!postId || !filePath) {
+        return res.status(400).json({ error: "Invalid request" });
+      }
+
+      // Validate that only legitimate paths are accessed
+      if (filePath.includes("..") || filePath.includes("//")) {
+        return res.status(403).json({ error: "Invalid file path" });
+      }
+
+      const mediaUrl = `${process.env.R2_PUBLIC_URL || `https://${process.env.R2_BUCKET_NAME}.${process.env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com`}/posts/${postId}/${filePath}`;
+
+      res.set({
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Cache-Control": "public, max-age=31536000",
+      });
+
+      const response = await fetch(mediaUrl);
+      const contentType = response.headers.get("content-type");
+
+      if (contentType) {
+        res.set("Content-Type", contentType);
+      }
+
+      res.set({
+        "Access-Control-Allow-Origin": "*",
+        "Cache-Control": "public, max-age=31536000",
+      });
+
+      response.body?.pipe(res);
+    } catch (err) {
+      console.error("Media proxy error:", err);
+      res.status(500).json({ error: "Failed to fetch media" });
+    }
+  });
+
   return app;
 }
