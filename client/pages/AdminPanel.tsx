@@ -104,6 +104,9 @@ const COUNTRIES = [
 ];
 
 export default function AdminPanel() {
+  const navigate = useNavigate();
+  const [authToken, setAuthToken] = useState<string | null>(null);
+  const [isAuthChecking, setIsAuthChecking] = useState(true);
   const [posts, setPosts] = useState<Post[]>([]);
   const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
   const [isLoadingPosts, setIsLoadingPosts] = useState(true);
@@ -118,6 +121,16 @@ export default function AdminPanel() {
 
   const [deletingPostId, setDeletingPostId] = useState<string | null>(null);
   const [isDeletingPost, setIsDeletingPost] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("auth_token");
+    setAuthToken(token);
+    setIsAuthChecking(false);
+
+    if (!token) {
+      navigate("/uppostpanel");
+    }
+  }, [navigate]);
 
   const filteredCountries = COUNTRIES.filter((c) =>
     c.toLowerCase().includes(countrySearch.toLowerCase()),
