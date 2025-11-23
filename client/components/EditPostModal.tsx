@@ -100,6 +100,7 @@ export default function EditPostModal({
   post,
   onClose,
   onUpdate,
+  authToken,
 }: EditPostModalProps) {
   const [title, setTitle] = useState(post.title);
   const [description, setDescription] = useState(post.description);
