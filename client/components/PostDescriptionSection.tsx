@@ -69,19 +69,19 @@ export default function PostDescriptionSection({
           <div className="flex flex-wrap gap-2">
             {tags.country && (
               <span className="inline-flex items-center gap-2 bg-accent/20 text-accent px-3 py-2 rounded-full text-xs sm:text-sm font-semibold">
-                <span>🌍</span>
+                <GlobeIcon className="w-4 h-4" />
                 {tags.country}
               </span>
             )}
             {tags.city && (
               <span className="inline-flex items-center gap-2 bg-accent/20 text-accent px-3 py-2 rounded-full text-xs sm:text-sm font-semibold">
-                <span>📍</span>
+                <MapPinIcon className="w-4 h-4" />
                 {tags.city}
               </span>
             )}
             {tags.server && (
               <span className="inline-flex items-center gap-2 bg-accent/20 text-accent px-3 py-2 rounded-full text-xs sm:text-sm font-semibold">
-                <span>🖥️</span>
+                <ServerIcon className="w-4 h-4" />
                 {tags.server}
               </span>
             )}
