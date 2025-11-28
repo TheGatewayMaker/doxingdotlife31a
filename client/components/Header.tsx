@@ -52,6 +52,12 @@ export default function Header() {
             Home
           </Link>
           <Link
+            to="/all-posts"
+            className="flex items-center gap-2 text-sm font-semibold text-gray-300 hover:text-white transition-colors"
+          >
+            All Posts
+          </Link>
+          <Link
             to="/dox-anyone"
             className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all"
           >
@@ -117,6 +123,13 @@ export default function Header() {
                 >
                   <HomeIcon className="w-5 h-5" />
                   Home
+                </Link>
+                <Link
+                  to="/all-posts"
+                  onClick={closeSidebar}
+                  className="flex items-center gap-3 w-full px-4 py-3 text-gray-300 font-semibold hover:bg-slate-700 hover:text-white rounded-lg transition-colors"
+                >
+                  All Posts
                 </Link>
                 <Link
                   to="/dox-anyone"

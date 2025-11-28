@@ -10,7 +10,7 @@ import {
   ServerIcon,
   CloseIcon,
 } from "@/components/Icons";
-import { Search, Flame } from "lucide-react";
+import { Flame, Search } from "lucide-react";
 
 const COUNTRIES = [
   "Afghanistan",
@@ -208,7 +208,7 @@ const COUNTRIES = [
   "Zimbabwe",
 ].sort();
 
-export default function Index() {
+export default function AllPosts() {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCountry, setSelectedCountry] = useState("");
@@ -305,10 +305,10 @@ export default function Index() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="animate-fadeIn" style={{ animationDelay: "0.1s" }}>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-3 text-white tracking-tighter leading-tight">
-                Doxing Dot Life
+                All Posts
               </h1>
               <p className="text-base sm:text-lg md:text-xl font-semibold text-gray-400 mb-6 max-w-2xl">
-                Find if you or someone you know have been Doxed
+                Browse all the doxed individuals in our database
               </p>
             </div>
 
@@ -443,7 +443,7 @@ export default function Index() {
           </div>
         </div>
 
-        {/* Hot & Recent Posts */}
+        {/* All Posts */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="mb-10 sm:mb-12 animate-fadeIn">
             {isLoadingPosts ? (
@@ -474,7 +474,7 @@ export default function Index() {
                 <div className="flex items-center gap-3">
                   <Flame className="w-8 h-8 text-orange-500" />
                   <h2 className="text-5xl md:text-6xl font-black text-white">
-                    Posts
+                    All Posts
                   </h2>
                 </div>
                 <p className="text-gray-400 mt-3">
@@ -514,7 +514,7 @@ export default function Index() {
                               errorDiv.className =
                                 "text-center text-muted-foreground flex flex-col items-center justify-center gap-2";
                               errorDiv.innerHTML =
-                                '<div class="text-3xl">🖼��</div><div class="text-xs">Image unavailable</div>';
+                                '<div class="text-3xl">🖼️</div><div class="text-xs">Image unavailable</div>';
                               parent.appendChild(errorDiv);
                             }
                           }}
