@@ -493,7 +493,7 @@ export default function Index() {
                   <div
                     key={post.id}
                     onClick={() => navigate(`/post/${post.id}`)}
-                    className="group rounded-xl overflow-hidden transition-all duration-300 cursor-pointer hover:-translate-y-2 animate-fadeIn bg-gradient-to-b from-gray-800 to-gray-900 border border-gray-700 hover:border-gray-600 hover:shadow-2xl hover:shadow-gray-900/50"
+                    className="group rounded-xl overflow-hidden transition-all duration-300 cursor-pointer hover:-translate-y-2 animate-fadeIn bg-gradient-to-b from-[#1a1a1a] to-[#0a0a0a] border border-[#666666] hover:border-[#0088CC] hover:shadow-2xl hover:shadow-[#0088CC]/20"
                     style={{ animationDelay: `${idx * 0.05}s` }}
                   >
                     {post.thumbnail && (
