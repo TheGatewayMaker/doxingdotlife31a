@@ -278,12 +278,12 @@ export default function PostDetail() {
 
             {/* Share Section */}
             <section
-              className="border-t border-gray-700 pt-8 sm:pt-10 animate-fadeIn"
+              className="border-t border-[#666666] pt-8 sm:pt-10 animate-fadeIn"
               style={{ animationDelay: "0.5s" }}
             >
               <button
                 onClick={handleShare}
-                className="flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gray-700 text-white font-bold rounded-lg hover:bg-gray-600 transition-all shadow-lg hover:shadow-xl hover:shadow-gray-900/50 active:scale-95 text-sm sm:text-base"
+                className="flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-[#0088CC] text-white font-bold rounded-lg hover:bg-[#0077BB] transition-all shadow-lg hover:shadow-lg hover:shadow-[#0088CC]/40 active:scale-95 text-sm sm:text-base"
               >
                 <Share2 className="w-5 h-5" />
                 <span>Share This Post</span>
