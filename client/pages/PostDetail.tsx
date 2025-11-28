@@ -199,11 +199,11 @@ export default function PostDetail() {
               <div className="mb-4">
                 <div className="flex flex-wrap items-center gap-2 mb-4">
                   {post.nsfw && (
-                    <span className="inline-flex items-center px-3 py-1 bg-gray-600 text-white text-xs font-bold rounded-full">
+                    <span className="inline-flex items-center px-3 py-1 bg-[#0088CC] text-white text-xs font-bold rounded-full">
                       NSFW
                     </span>
                   )}
-                  <span className="inline-flex items-center px-3 py-1 bg-gray-700 text-gray-300 text-xs font-semibold rounded-full border border-gray-600">
+                  <span className="inline-flex items-center px-3 py-1 bg-[#666666] text-white text-xs font-semibold rounded-full border border-[#979797]">
                     📰 Post
                   </span>
                 </div>
