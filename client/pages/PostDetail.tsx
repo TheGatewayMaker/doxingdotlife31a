@@ -48,14 +48,14 @@ export default function PostDetail() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white flex flex-col animate-fadeIn">
+      <div className="min-h-screen bg-gradient-to-b from-[#000000] via-[#1a1a1a] to-[#000000] text-white flex flex-col animate-fadeIn">
         <Header />
         <main className="flex-1 w-full flex items-center justify-center px-4">
           <div className="text-center">
             <div className="inline-block animate-spin mb-4">
-              <div className="w-14 h-14 border-4 border-gray-600 border-t-gray-300 rounded-full"></div>
+              <div className="w-14 h-14 border-4 border-[#666666] border-t-[#0088CC] rounded-full"></div>
             </div>
-            <p className="text-gray-400 text-lg">Loading post...</p>
+            <p className="text-[#979797] text-lg">Loading post...</p>
           </div>
         </main>
         <Footer />
@@ -65,7 +65,7 @@ export default function PostDetail() {
 
   if (error || !post) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white flex flex-col animate-fadeIn">
+      <div className="min-h-screen bg-gradient-to-b from-[#000000] via-[#1a1a1a] to-[#000000] text-white flex flex-col animate-fadeIn">
         <Header />
         <main className="flex-1 w-full flex items-center justify-center px-4">
           <div className="text-center">
@@ -73,12 +73,12 @@ export default function PostDetail() {
             <h2 className="text-3xl font-bold mb-4 text-white">
               {error || "Post not found"}
             </h2>
-            <p className="text-gray-400 mb-6 max-w-sm">
+            <p className="text-[#979797] mb-6 max-w-sm">
               The post you're looking for doesn't exist or has been removed.
             </p>
             <button
               onClick={() => navigate("/")}
-              className="px-6 py-3 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition-all shadow-md"
+              className="px-6 py-3 bg-[#0088CC] text-white font-semibold rounded-lg hover:bg-[#0077BB] transition-all shadow-md hover:shadow-lg active:scale-95"
             >
               ← Back to Home
             </button>
@@ -91,7 +91,7 @@ export default function PostDetail() {
 
   if (showNSFWWarning && !nsfwApproved && post.nsfw) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white flex flex-col animate-fadeIn">
+      <div className="min-h-screen bg-gradient-to-b from-[#000000] via-[#1a1a1a] to-[#000000] text-white flex flex-col animate-fadeIn">
         <Header />
         <main className="flex-1 w-full flex items-center justify-center p-4">
           <NSFWWarningModal
@@ -122,14 +122,14 @@ export default function PostDetail() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white flex flex-col animate-fadeIn">
+    <div className="min-h-screen bg-gradient-to-b from-[#000000] via-[#1a1a1a] to-[#000000] text-white flex flex-col animate-fadeIn">
       <Header />
       <main className="flex-1 w-full">
         <div className="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-10 lg:py-12">
           {/* Back Button */}
           <button
             onClick={() => navigate("/")}
-            className="flex items-center gap-2 px-4 py-2 mb-8 text-gray-500 hover:text-gray-200 transition-all duration-200 font-semibold animate-fadeIn hover:translate-x-[-4px]"
+            className="flex items-center gap-2 px-4 py-2 mb-8 text-[#979797] hover:text-[#0088CC] transition-all duration-200 font-semibold animate-fadeIn hover:translate-x-[-4px]"
           >
             <svg
               className="w-5 h-5"
@@ -150,13 +150,13 @@ export default function PostDetail() {
           <div className="max-w-5xl mx-auto">
             {/* NSFW Warning Banner */}
             {post.nsfw && (
-              <div className="mb-8 bg-gray-800 border border-gray-700 rounded-xl p-4 sm:p-5 flex items-start gap-3 sm:gap-4 animate-fadeIn">
+              <div className="mb-8 bg-[#1a1a1a] border border-[#666666] rounded-xl p-4 sm:p-5 flex items-start gap-3 sm:gap-4 animate-fadeIn">
                 <div className="text-3xl flex-shrink-0">🔞</div>
                 <div className="flex-1 min-w-0">
-                  <p className="font-bold text-gray-300 mb-1">
+                  <p className="font-bold text-white mb-1">
                     NSFW Content Warning
                   </p>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-[#979797]">
                     This post contains explicit content. Ensure you're viewing
                     in an appropriate and private setting.
                   </p>
@@ -170,7 +170,7 @@ export default function PostDetail() {
               style={{ animationDelay: "0.1s" }}
             >
               {post.thumbnail && !thumbnailError && (
-                <div className="rounded-xl overflow-hidden border border-gray-700 shadow-2xl max-w-3xl mx-auto">
+                <div className="rounded-xl overflow-hidden border border-[#666666] shadow-2xl max-w-3xl mx-auto">
                   <img
                     src={post.thumbnail}
                     alt={post.title}
@@ -182,10 +182,10 @@ export default function PostDetail() {
               )}
 
               {thumbnailError && (
-                <div className="w-full h-96 bg-gray-800 flex items-center justify-center rounded-xl border border-gray-700">
+                <div className="w-full h-96 bg-[#1a1a1a] flex items-center justify-center rounded-xl border border-[#666666]">
                   <div className="text-center">
                     <div className="text-8xl mb-3">🖼️</div>
-                    <p className="text-gray-500">Thumbnail unavailable</p>
+                    <p className="text-[#979797]">Thumbnail unavailable</p>
                   </div>
                 </div>
               )}
@@ -199,11 +199,11 @@ export default function PostDetail() {
               <div className="mb-4">
                 <div className="flex flex-wrap items-center gap-2 mb-4">
                   {post.nsfw && (
-                    <span className="inline-flex items-center px-3 py-1 bg-gray-600 text-white text-xs font-bold rounded-full">
+                    <span className="inline-flex items-center px-3 py-1 bg-[#0088CC] text-white text-xs font-bold rounded-full">
                       NSFW
                     </span>
                   )}
-                  <span className="inline-flex items-center px-3 py-1 bg-gray-700 text-gray-300 text-xs font-semibold rounded-full border border-gray-600">
+                  <span className="inline-flex items-center px-3 py-1 bg-[#666666] text-white text-xs font-semibold rounded-full border border-[#979797]">
                     📰 Post
                   </span>
                 </div>
@@ -213,7 +213,7 @@ export default function PostDetail() {
               </div>
 
               {/* Post Metadata */}
-              <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 text-xs sm:text-sm text-gray-500 space-y-2 sm:space-y-0">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 text-xs sm:text-sm text-[#979797] space-y-2 sm:space-y-0">
                 <div className="flex items-center gap-2">
                   <span className="text-lg">📅</span>
                   <span>
@@ -224,7 +224,7 @@ export default function PostDetail() {
                     })}
                   </span>
                 </div>
-                <div className="hidden sm:block w-1 h-1 bg-gray-700 rounded-full"></div>
+                <div className="hidden sm:block w-1 h-1 bg-[#666666] rounded-full"></div>
                 <div className="flex items-center gap-2">
                   <span className="text-lg">🕒</span>
                   <span>
@@ -242,7 +242,7 @@ export default function PostDetail() {
               className="mb-10 sm:mb-12 animate-fadeIn"
               style={{ animationDelay: "0.3s" }}
             >
-              <div className="bg-gray-800 border border-gray-700 rounded-xl p-6 sm:p-8">
+              <div className="bg-[#1a1a1a] border border-[#666666] rounded-xl p-6 sm:p-8">
                 <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2">
                   <span>📋</span>
                   Overview
@@ -278,12 +278,12 @@ export default function PostDetail() {
 
             {/* Share Section */}
             <section
-              className="border-t border-gray-700 pt-8 sm:pt-10 animate-fadeIn"
+              className="border-t border-[#666666] pt-8 sm:pt-10 animate-fadeIn"
               style={{ animationDelay: "0.5s" }}
             >
               <button
                 onClick={handleShare}
-                className="flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gray-700 text-white font-bold rounded-lg hover:bg-gray-600 transition-all shadow-lg hover:shadow-xl hover:shadow-gray-900/50 active:scale-95 text-sm sm:text-base"
+                className="flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-[#0088CC] text-white font-bold rounded-lg hover:bg-[#0077BB] transition-all shadow-lg hover:shadow-lg hover:shadow-[#0088CC]/40 active:scale-95 text-sm sm:text-base"
               >
                 <Share2 className="w-5 h-5" />
                 <span>Share This Post</span>

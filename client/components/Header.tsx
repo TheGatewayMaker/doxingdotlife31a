@@ -23,7 +23,7 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full bg-gradient-to-r from-gray-950 to-gray-900 backdrop-blur-md border-b border-gray-700 shadow-lg animate-fadeIn sticky top-0 z-40">
+    <header className="w-full bg-gradient-to-r from-[#000000] to-[#1a1a1a] backdrop-blur-md border-b border-[#666666] shadow-lg animate-fadeIn sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <Link
           to="/"
@@ -48,20 +48,20 @@ export default function Header() {
         <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
           <Link
             to="/"
-            className="flex items-center gap-2 text-sm font-semibold text-gray-300 hover:text-white transition-colors duration-200"
+            className="flex items-center gap-2 text-sm font-semibold text-[#979797] hover:text-white transition-colors duration-200"
           >
             <HomeIcon className="w-4 h-4 sm:w-5 sm:h-5" />
             <span className="hidden xl:inline">Home</span>
           </Link>
           <Link
             to="/all-posts"
-            className="text-sm font-semibold text-gray-300 hover:text-white transition-colors duration-200"
+            className="text-sm font-semibold text-[#979797] hover:text-white transition-colors duration-200"
           >
             Posts
           </Link>
           <Link
             to="/dox-anyone"
-            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200 shadow-md hover:shadow-lg hover:shadow-blue-500/30"
+            className="flex items-center gap-2 px-5 py-2 bg-[#0088CC] text-white font-semibold rounded-lg hover:bg-[#0077BB] transition-all duration-200 shadow-md hover:shadow-lg hover:shadow-[#0088CC]/40 active:scale-95"
           >
             <SearchAltIcon className="w-4 h-4" />
             <span>Dox Now</span>
@@ -70,21 +70,21 @@ export default function Header() {
             <>
               <Link
                 to="/uppostpanel"
-                className="flex items-center gap-2 text-sm font-semibold text-gray-300 hover:text-white transition-colors duration-200"
+                className="flex items-center gap-2 text-sm font-semibold text-[#979797] hover:text-white transition-colors duration-200"
               >
                 <UploadIcon className="w-4 h-4" />
                 <span className="hidden xl:inline">Upload</span>
               </Link>
               <Link
                 to="/admin-panel"
-                className="flex items-center gap-2 px-4 py-2 bg-gray-600 text-white font-semibold rounded-lg hover:bg-gray-500 transition-all duration-200"
+                className="flex items-center gap-2 px-5 py-2 bg-[#666666] text-white font-semibold rounded-lg hover:bg-[#777777] transition-all duration-200 shadow-md hover:shadow-lg"
               >
                 <SettingsIcon className="w-4 h-4" />
                 <span className="hidden xl:inline">Admin</span>
               </Link>
               <button
                 onClick={handleLogout}
-                className="flex items-center gap-2 px-4 py-2 bg-gray-500 text-white font-semibold rounded-lg hover:bg-gray-400 transition-all duration-200"
+                className="flex items-center gap-2 px-5 py-2 bg-[#666666] text-white font-semibold rounded-lg hover:bg-[#555555] transition-all duration-200 shadow-md hover:shadow-lg"
               >
                 <LogOut className="w-4 h-4" />
                 <span className="hidden xl:inline">Logout</span>
@@ -95,7 +95,7 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden p-2 hover:bg-gray-800/50 rounded-lg transition-all duration-200 z-50"
+          className="lg:hidden p-2 hover:bg-[#666666]/30 rounded-lg transition-all duration-200 z-50"
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
           aria-label="Toggle navigation menu"
         >
@@ -116,12 +116,12 @@ export default function Header() {
             />
 
             {/* Sidebar */}
-            <div className="fixed left-0 top-16 bottom-0 w-64 sm:w-72 bg-gradient-to-b from-gray-900 to-gray-950 border-r border-gray-700 lg:hidden z-40 animate-slideInLeft shadow-2xl flex flex-col">
+            <div className="fixed left-0 top-16 bottom-0 w-64 sm:w-72 bg-gradient-to-b from-[#1a1a1a] to-[#000000] border-r border-[#666666] lg:hidden z-40 animate-slideInLeft shadow-2xl flex flex-col">
               <nav className="p-4 space-y-2 overflow-y-auto flex-1">
                 <Link
                   to="/"
                   onClick={closeSidebar}
-                  className="flex items-center gap-3 w-full px-4 py-3 text-gray-400 font-semibold hover:bg-gray-800 hover:text-white rounded-lg transition-all duration-200"
+                  className="flex items-center gap-3 w-full px-4 py-3 text-[#979797] font-semibold hover:bg-[#666666]/30 hover:text-white rounded-lg transition-all duration-200"
                 >
                   <HomeIcon className="w-5 h-5 flex-shrink-0" />
                   <span>Home</span>
@@ -129,7 +129,7 @@ export default function Header() {
                 <Link
                   to="/all-posts"
                   onClick={closeSidebar}
-                  className="flex items-center gap-3 w-full px-4 py-3 text-gray-400 font-semibold hover:bg-gray-800 hover:text-white rounded-lg transition-all duration-200"
+                  className="flex items-center gap-3 w-full px-4 py-3 text-[#979797] font-semibold hover:bg-[#666666]/30 hover:text-white rounded-lg transition-all duration-200"
                 >
                   <span className="text-lg">📋</span>
                   <span>All Posts</span>
@@ -137,18 +137,18 @@ export default function Header() {
                 <Link
                   to="/dox-anyone"
                   onClick={closeSidebar}
-                  className="flex items-center gap-3 w-full px-4 py-3 text-white font-semibold hover:bg-blue-700 rounded-lg transition-all duration-200 bg-blue-600"
+                  className="flex items-center gap-3 w-full px-4 py-3 text-white font-semibold hover:bg-[#0077BB] rounded-lg transition-all duration-200 bg-[#0088CC]"
                 >
                   <SearchAltIcon className="w-5 h-5 flex-shrink-0" />
                   <span>Dox Now</span>
                 </Link>
                 {isAuthenticated && (
                   <>
-                    <div className="my-2 border-t border-gray-700" />
+                    <div className="my-2 border-t border-[#666666]" />
                     <Link
                       to="/uppostpanel"
                       onClick={closeSidebar}
-                      className="flex items-center gap-3 w-full px-4 py-3 text-gray-400 font-semibold hover:bg-gray-800 hover:text-white rounded-lg transition-all duration-200"
+                      className="flex items-center gap-3 w-full px-4 py-3 text-[#979797] font-semibold hover:bg-[#666666]/30 hover:text-white rounded-lg transition-all duration-200"
                     >
                       <UploadIcon className="w-5 h-5 flex-shrink-0" />
                       <span>Upload Post</span>
@@ -156,7 +156,7 @@ export default function Header() {
                     <Link
                       to="/admin-panel"
                       onClick={closeSidebar}
-                      className="flex items-center gap-3 w-full px-4 py-3 text-white font-semibold hover:bg-gray-600 rounded-lg transition-all duration-200 bg-gray-600"
+                      className="flex items-center gap-3 w-full px-4 py-3 text-white font-semibold hover:bg-[#777777] rounded-lg transition-all duration-200 bg-[#666666]"
                     >
                       <SettingsIcon className="w-5 h-5 flex-shrink-0" />
                       <span>Admin Panel</span>
@@ -165,10 +165,10 @@ export default function Header() {
                 )}
               </nav>
               {isAuthenticated && (
-                <div className="p-4 border-t border-gray-700">
+                <div className="p-4 border-t border-[#666666]">
                   <button
                     onClick={handleLogout}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gray-500 text-white font-semibold rounded-lg hover:bg-gray-400 transition-all duration-200 shadow-md"
+                    className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#666666] text-white font-semibold rounded-lg hover:bg-[#555555] transition-all duration-200 shadow-md"
                   >
                     <LogOut className="w-4 h-4" />
                     <span>Logout</span>

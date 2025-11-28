@@ -14,7 +14,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-gradient-to-t from-gray-950 to-gray-900 border-t border-gray-700 mt-16 shadow-lg animate-fadeIn">
+    <footer className="w-full bg-gradient-to-t from-[#000000] to-[#1a1a1a] border-t border-[#666666] mt-16 shadow-lg animate-fadeIn">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8">
           <div className="animate-fadeIn" style={{ animationDelay: "0.1s" }}>
@@ -33,21 +33,21 @@ export default function Footer() {
                 <p className="text-xs text-gray-500">Doxing Database</p>
               </div>
             </div>
-            <p className="text-sm text-gray-500 leading-relaxed">
+            <p className="text-sm text-[#979797] leading-relaxed">
               The largest database of exposed and doxed individuals. Find and
               share information about anyone.
             </p>
           </div>
           <div className="animate-fadeIn" style={{ animationDelay: "0.2s" }}>
             <h4 className="font-bold text-white mb-4 flex items-center gap-2 text-sm uppercase tracking-wider">
-              <LinkIcon className="w-4 h-4 text-gray-500" />
+              <LinkIcon className="w-4 h-4 text-[#979797]" />
               Navigation
             </h4>
-            <ul className="space-y-2.5 text-sm text-gray-500">
+            <ul className="space-y-2.5 text-sm text-[#979797]">
               <li>
                 <a
                   href="/"
-                  className="hover:text-gray-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="hover:text-[#0088CC] transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <HomeIcon className="w-4 h-4" />
                   <span>Home</span>
@@ -56,7 +56,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/all-posts"
-                  className="hover:text-gray-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="hover:text-[#0088CC] transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <SearchAltIcon className="w-4 h-4" />
                   <span>Browse Database</span>
@@ -65,7 +65,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/dox-anyone"
-                  className="hover:text-gray-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="hover:text-[#0088CC] transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <MessageIcon className="w-4 h-4" />
                   <span>Search Tool</span>
@@ -75,14 +75,14 @@ export default function Footer() {
           </div>
           <div className="animate-fadeIn" style={{ animationDelay: "0.3s" }}>
             <h4 className="font-bold text-white mb-4 flex items-center gap-2 text-sm uppercase tracking-wider">
-              <FileTextIcon className="w-4 h-4 text-gray-500" />
+              <FileTextIcon className="w-4 h-4 text-[#979797]" />
               Legal
             </h4>
-            <ul className="space-y-2.5 text-sm text-gray-500">
+            <ul className="space-y-2.5 text-sm text-[#979797]">
               <li>
                 <a
                   href="#"
-                  className="hover:text-gray-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="hover:text-[#0088CC] transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <FileTextIcon className="w-4 h-4" />
                   <span>Privacy Policy</span>
@@ -91,7 +91,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="hover:text-gray-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="hover:text-[#0088CC] transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <ScaleIcon className="w-4 h-4" />
                   <span>Terms of Service</span>
@@ -100,7 +100,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="hover:text-gray-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="hover:text-[#0088CC] transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <AlertIcon className="w-4 h-4" />
                   <span>Disclaimer</span>
@@ -110,14 +110,14 @@ export default function Footer() {
           </div>
           <div className="animate-fadeIn" style={{ animationDelay: "0.4s" }}>
             <h4 className="font-bold text-white mb-4 flex items-center gap-2 text-sm uppercase tracking-wider">
-              <ShoppingCartIcon className="w-4 h-4 text-gray-500" />
+              <ShoppingCartIcon className="w-4 h-4 text-[#979797]" />
               Support
             </h4>
-            <ul className="space-y-2.5 text-sm text-gray-500">
+            <ul className="space-y-2.5 text-sm text-[#979797]">
               <li>
                 <a
                   href="#"
-                  className="hover:text-gray-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="hover:text-[#0088CC] transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <CreditCardIcon className="w-4 h-4" />
                   <span>Premium Access</span>
@@ -126,7 +126,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="hover:text-gray-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="hover:text-[#0088CC] transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <PhoneIcon className="w-4 h-4" />
                   <span>Contact</span>
@@ -135,7 +135,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="hover:text-gray-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="hover:text-[#0088CC] transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <MailIcon className="w-4 h-4" />
                   <span>Report Issue</span>
@@ -144,10 +144,10 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-700 pt-8 sm:pt-10">
-          <div className="text-center text-xs sm:text-sm text-gray-600">
+        <div className="border-t border-[#666666] pt-8 sm:pt-10">
+          <div className="text-center text-xs sm:text-sm text-[#666666]">
             <p>&copy; 2024 - 2027 Doxing Dot Life. All rights reserved.</p>
-            <p className="mt-2 text-gray-700">
+            <p className="mt-2 text-[#666666]">
               Find, Dox, Expose - The Database
             </p>
           </div>

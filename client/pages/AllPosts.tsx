@@ -296,18 +296,18 @@ export default function AllPosts() {
   const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white flex flex-col animate-fadeIn">
+    <div className="min-h-screen bg-gradient-to-b from-[#000000] via-[#1a1a1a] to-[#000000] text-white flex flex-col animate-fadeIn">
       <Header />
 
       <main className="flex-1 w-full">
         {/* Hero Section */}
-        <div className="bg-gradient-to-br from-slate-800 via-slate-900 to-slate-900 pt-8 pb-8 md:pt-16 md:pb-12 border-b border-slate-700">
+        <div className="bg-gradient-to-b from-[#1a1a1a]/80 to-transparent pt-8 pb-8 md:pt-16 md:pb-12 border-b border-[#666666]">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="animate-fadeIn" style={{ animationDelay: "0.1s" }}>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-3 text-white tracking-tighter leading-tight">
                 All Posts
               </h1>
-              <p className="text-base sm:text-lg md:text-xl font-semibold text-gray-400 mb-6 max-w-2xl">
+              <p className="text-base sm:text-lg md:text-xl font-semibold text-[#979797] mb-6 max-w-2xl">
                 Browse all the doxed individuals in our database
               </p>
             </div>
@@ -322,9 +322,9 @@ export default function AllPosts() {
                 placeholder="Search Doxed Individuals"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 sm:px-5 py-3 sm:py-3.5 bg-slate-800 border-2 border-slate-700 hover:border-blue-500 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm sm:text-base transition-all shadow-md hover:shadow-lg hover:shadow-blue-500/30"
+                className="w-full px-4 sm:px-5 py-3 sm:py-3.5 bg-[#1a1a1a] border-2 border-[#666666] hover:border-[#0088CC] rounded-lg text-white placeholder-[#979797] focus:outline-none focus:ring-2 focus:ring-[#0088CC] focus:border-[#0088CC] text-sm sm:text-base transition-all shadow-md hover:shadow-lg hover:shadow-[#0088CC]/30"
               />
-              <Search className="absolute right-4 sm:right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none" />
+              <Search className="absolute right-4 sm:right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-[#979797] pointer-events-none" />
             </div>
 
             {/* Categories Section */}
@@ -336,7 +336,7 @@ export default function AllPosts() {
                 {/* Country Dropdown */}
                 <div className="relative group">
                   <label className="text-sm font-bold text-white block mb-3 flex items-center gap-2">
-                    <GlobeIcon className="w-4 h-4 text-blue-400" />
+                    <GlobeIcon className="w-4 h-4 text-[#0088CC]" />
                     By Country
                   </label>
                   <div className="relative">
@@ -347,7 +347,7 @@ export default function AllPosts() {
                       }
                       value={countrySearch}
                       onChange={(e) => setCountrySearch(e.target.value)}
-                      className="w-full px-4 py-3 pr-10 bg-slate-800 border border-slate-700 hover:border-blue-500 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm transition-all shadow-sm hover:shadow-md hover:shadow-blue-500/20"
+                      className="w-full px-4 py-3 pr-10 bg-[#1a1a1a] border border-[#666666] hover:border-[#0088CC] rounded-lg text-white placeholder-[#979797] focus:outline-none focus:ring-2 focus:ring-[#0088CC] focus:border-[#0088CC] text-sm transition-all shadow-sm hover:shadow-md hover:shadow-[#0088CC]/20"
                     />
                     {selectedCountry && (
                       <button
@@ -363,7 +363,7 @@ export default function AllPosts() {
                     )}
                   </div>
                   {countrySearch && (
-                    <div className="absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-slate-700 rounded-lg z-[999] max-h-48 overflow-y-auto shadow-lg">
+                    <div className="absolute top-full left-0 right-0 mt-2 bg-[#1a1a1a] border border-[#666666] rounded-lg z-[999] max-h-48 overflow-y-auto shadow-lg">
                       {filteredCountries.length > 0 ? (
                         filteredCountries.map((country) => (
                           <button
@@ -372,13 +372,13 @@ export default function AllPosts() {
                               setSelectedCountry(country);
                               setCountrySearch("");
                             }}
-                            className="w-full text-left px-4 py-2 hover:bg-blue-600/30 hover:border-l-2 hover:border-l-blue-500 text-white text-sm transition-all duration-200"
+                            className="w-full text-left px-4 py-2 hover:bg-[#0088CC]/30 hover:border-l-2 hover:border-l-[#0088CC] text-white text-sm transition-all duration-200"
                           >
                             {country}
                           </button>
                         ))
                       ) : (
-                        <div className="px-4 py-2 text-gray-500 text-sm">
+                        <div className="px-4 py-2 text-[#666666] text-sm">
                           No countries found
                         </div>
                       )}
@@ -389,7 +389,7 @@ export default function AllPosts() {
                 {/* Server Dropdown */}
                 <div className="relative group">
                   <label className="text-sm font-bold text-white block mb-3 flex items-center gap-2">
-                    <ServerIcon className="w-4 h-4 text-blue-400" />
+                    <ServerIcon className="w-4 h-4 text-[#0088CC]" />
                     By Server
                   </label>
                   <div className="relative">
@@ -400,7 +400,7 @@ export default function AllPosts() {
                       }
                       value={serverSearch}
                       onChange={(e) => setServerSearch(e.target.value)}
-                      className="w-full px-4 py-3 pr-10 bg-slate-800 border border-slate-700 hover:border-blue-500 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm transition-all shadow-sm hover:shadow-md hover:shadow-blue-500/20"
+                      className="w-full px-4 py-3 pr-10 bg-[#1a1a1a] border border-[#666666] hover:border-[#0088CC] rounded-lg text-white placeholder-[#979797] focus:outline-none focus:ring-2 focus:ring-[#0088CC] focus:border-[#0088CC] text-sm transition-all shadow-sm hover:shadow-md hover:shadow-[#0088CC]/20"
                     />
                     {selectedServer && (
                       <button
@@ -416,7 +416,7 @@ export default function AllPosts() {
                     )}
                   </div>
                   {serverSearch && (
-                    <div className="absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-slate-700 rounded-lg z-[999] max-h-48 overflow-y-auto shadow-lg">
+                    <div className="absolute top-full left-0 right-0 mt-2 bg-[#1a1a1a] border border-[#666666] rounded-lg z-[999] max-h-48 overflow-y-auto shadow-lg">
                       {filteredServers.length > 0 ? (
                         filteredServers.map((server) => (
                           <button
@@ -425,13 +425,13 @@ export default function AllPosts() {
                               setSelectedServer(server);
                               setServerSearch("");
                             }}
-                            className="w-full text-left px-4 py-2 hover:bg-blue-600/30 hover:border-l-2 hover:border-l-blue-500 text-white text-sm transition-all duration-200"
+                            className="w-full text-left px-4 py-2 hover:bg-[#0088CC]/30 hover:border-l-2 hover:border-l-[#0088CC] text-white text-sm transition-all duration-200"
                           >
                             {server}
                           </button>
                         ))
                       ) : (
-                        <div className="px-4 py-2 text-gray-500 text-sm">
+                        <div className="px-4 py-2 text-[#666666] text-sm">
                           No servers found
                         </div>
                       )}
@@ -450,11 +450,11 @@ export default function AllPosts() {
               <>
                 <h2 className="text-5xl md:text-6xl font-black mb-3 flex items-center gap-3 text-white">
                   <span className="inline-block animate-spin">
-                    <div className="w-10 h-10 border-3 border-slate-700 border-t-blue-500 rounded-full"></div>
+                    <div className="w-10 h-10 border-3 border-[#666666] border-t-[#0088CC] rounded-full"></div>
                   </span>
                   Loading Posts
                 </h2>
-                <p className="text-gray-400">
+                <p className="text-[#979797]">
                   Fetching the latest posts for you...
                 </p>
               </>
@@ -463,7 +463,7 @@ export default function AllPosts() {
                 <h2 className="text-5xl md:text-6xl font-black mb-3 text-white">
                   No Posts Found
                 </h2>
-                <p className="text-gray-400">
+                <p className="text-[#979797]">
                   {hasSearchFilters
                     ? "Try adjusting your search filters"
                     : "No posts available at the moment"}
@@ -477,7 +477,7 @@ export default function AllPosts() {
                     All Posts
                   </h2>
                 </div>
-                <p className="text-gray-400 mt-3">
+                <p className="text-[#979797] mt-3">
                   Showing {displayedPosts.length} of {filteredPosts.length}{" "}
                   posts
                 </p>
@@ -492,7 +492,7 @@ export default function AllPosts() {
                   <div
                     key={post.id}
                     onClick={() => navigate(`/post/${post.id}`)}
-                    className="group rounded-xl overflow-hidden transition-all duration-300 cursor-pointer hover:-translate-y-1 animate-fadeIn bg-slate-800 border border-slate-700 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/20"
+                    className="group rounded-xl overflow-hidden transition-all duration-300 cursor-pointer hover:-translate-y-1 animate-fadeIn bg-[#1a1a1a] border border-[#666666] hover:border-[#0088CC] hover:shadow-xl hover:shadow-[#0088CC]/20"
                     style={{ animationDelay: `${idx * 0.05}s` }}
                   >
                     {post.thumbnail && (
