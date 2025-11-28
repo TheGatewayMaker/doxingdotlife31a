@@ -451,11 +451,11 @@ export default function Index() {
               <>
                 <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-3 flex items-center gap-3 text-white">
                   <span className="inline-block animate-spin">
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 border-3 border-slate-600 border-t-blue-500 rounded-full"></div>
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 border-3 border-[#666666] border-t-[#0088CC] rounded-full"></div>
                   </span>
                   <span>Loading Posts</span>
                 </h2>
-                <p className="text-gray-400 text-sm sm:text-base">
+                <p className="text-[#979797] text-sm sm:text-base">
                   Fetching the latest posts for you...
                 </p>
               </>
@@ -464,7 +464,7 @@ export default function Index() {
                 <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-3 text-white">
                   No Posts Found
                 </h2>
-                <p className="text-gray-400 text-sm sm:text-base">
+                <p className="text-[#979797] text-sm sm:text-base">
                   {hasSearchFilters
                     ? "Try adjusting your search filters"
                     : "No posts available at the moment"}
@@ -478,7 +478,7 @@ export default function Index() {
                     Results
                   </h2>
                 </div>
-                <p className="text-gray-400 text-sm sm:text-base">
+                <p className="text-[#979797] text-sm sm:text-base">
                   Showing {displayedPosts.length} of {filteredPosts.length}{" "}
                   result{filteredPosts.length !== 1 ? "s" : ""}
                 </p>
