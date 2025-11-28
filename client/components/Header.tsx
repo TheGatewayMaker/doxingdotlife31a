@@ -135,10 +135,10 @@ export default function Header() {
                 <Link
                   to="/dox-anyone"
                   onClick={closeSidebar}
-                  className="flex items-center gap-3 w-full px-4 py-3 text-white font-semibold hover:bg-gray-700 rounded-lg transition-all duration-200 bg-gray-700"
+                  className="flex items-center gap-3 w-full px-4 py-3 text-white font-semibold hover:bg-blue-700 rounded-lg transition-all duration-200 bg-blue-600"
                 >
                   <SearchAltIcon className="w-5 h-5 flex-shrink-0" />
-                  <span>Dox Anyone</span>
+                  <span>Dox Now</span>
                 </Link>
                 {isAuthenticated && (
                   <>
