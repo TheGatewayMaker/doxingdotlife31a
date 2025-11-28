@@ -535,12 +535,12 @@ export default function Index() {
                           </span>
                         )}
                       </div>
-                      <p className="text-xs sm:text-sm line-clamp-2 mb-4 text-gray-500">
+                      <p className="text-xs sm:text-sm line-clamp-2 mb-4 text-[#979797]">
                         {post.description}
                       </p>
                       <div className="flex flex-wrap gap-1.5 sm:gap-2">
                         {post.country && (
-                          <span className="inline-flex items-center gap-0.5 px-2 sm:px-3 py-1 rounded-full text-xs font-medium bg-gray-700 text-gray-300 border border-gray-600">
+                          <span className="inline-flex items-center gap-0.5 px-2 sm:px-3 py-1 rounded-full text-xs font-medium bg-[#666666] text-white border border-[#979797]">
                             <GlobeIcon className="w-3 h-3" />
                             <span className="hidden sm:inline">
                               {post.country}
