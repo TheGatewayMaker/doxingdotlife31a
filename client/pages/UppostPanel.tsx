@@ -254,11 +254,13 @@ export default function UppostPanel() {
                         <path d="M12 1C6.48 1 2 5.48 2 11s4.48 10 10 10 10-4.48 10-10S17.52 1 12 1zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
                       </svg>
                       <p className="text-sm text-[#FFFFFF] font-bold">
-                        Only authorized Gmail accounts can access this admin panel
+                        Only authorized Gmail accounts can access this admin
+                        panel
                       </p>
                     </div>
                     <p className="text-xs text-[#B0D4F1] font-medium ml-8">
-                      Contact the administrator if you believe your email should be authorized.
+                      Contact the administrator if you believe your email should
+                      be authorized.
                     </p>
                   </div>
                 </div>
