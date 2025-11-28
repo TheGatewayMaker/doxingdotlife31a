@@ -27,6 +27,7 @@ const AppContent = () => {
   return (
     <Routes>
       <Route path="/" element={<Index />} />
+      <Route path="/all-posts" element={<AllPosts />} />
       <Route path="/post/:postId" element={<PostDetail />} />
       <Route path="/dox-anyone" element={<DoxAnyone />} />
       <Route path="/uppostpanel" element={<UppostPanel />} />
