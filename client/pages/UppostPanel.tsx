@@ -530,7 +530,6 @@ export default function UppostPanel() {
 
             {/* NSFW Checkbox */}
             <div className="relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 to-red-900/5 rounded-2xl" />
               <div className="relative flex items-center gap-3 bg-red-900/15 border-2 border-red-600/40 hover:border-red-600/60 rounded-2xl p-6 transition-all duration-300 hover:shadow-lg hover:shadow-red-600/10">
                 <input
                   type="checkbox"
