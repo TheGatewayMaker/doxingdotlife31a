@@ -636,68 +636,33 @@ export default function Index() {
                     )}
                     <div className="p-5">
                       <div className="flex items-start justify-between gap-2 mb-3">
-                        <h3
-                          className={`font-bold text-base line-clamp-2 flex-1 ${
-                            post.nsfw
-                              ? "text-red-100 group-hover:text-red-50"
-                              : "text-white group-hover:text-blue-400"
-                          } transition-colors`}
-                        >
+                        <h3 className="font-bold text-base line-clamp-2 flex-1 text-white group-hover:text-blue-400 transition-colors">
                           {post.title}
                         </h3>
                         {post.nsfw && (
-                          <span className="inline-flex items-center gap-1 bg-red-500 text-white px-2 py-1 rounded text-xs font-bold flex-shrink-0">
-                            <svg
-                              className="w-3 h-3"
-                              fill="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
-                            </svg>
+                          <span className="inline-flex items-center gap-1 bg-red-600 text-white px-3 py-1.5 rounded-lg text-xs font-bold flex-shrink-0 whitespace-nowrap">
                             NSFW
                           </span>
                         )}
                       </div>
-                      <p
-                        className={`text-sm line-clamp-3 mb-4 ${
-                          post.nsfw ? "text-red-200" : "text-gray-400"
-                        }`}
-                      >
+                      <p className="text-sm line-clamp-3 mb-4 text-gray-400">
                         {post.description}
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {post.country && (
-                          <span
-                            className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium ${
-                              post.nsfw
-                                ? "bg-red-600/30 text-red-200"
-                                : "bg-blue-600/20 text-blue-300"
-                            }`}
-                          >
+                          <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-blue-600/20 text-blue-300">
                             <GlobeIcon className="w-3 h-3" />
                             {post.country}
                           </span>
                         )}
                         {post.city && (
-                          <span
-                            className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium ${
-                              post.nsfw
-                                ? "bg-red-600/30 text-red-200"
-                                : "bg-blue-600/20 text-blue-300"
-                            }`}
-                          >
+                          <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-blue-600/20 text-blue-300">
                             <MapPinIcon className="w-3 h-3" />
                             {post.city}
                           </span>
                         )}
                         {post.server && (
-                          <span
-                            className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium ${
-                              post.nsfw
-                                ? "bg-red-600/30 text-red-200"
-                                : "bg-blue-600/20 text-blue-300"
-                            }`}
-                          >
+                          <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-blue-600/20 text-blue-300">
                             <ServerIcon className="w-3 h-3" />
                             {post.server}
                           </span>
