@@ -28,20 +28,29 @@ export const handleUpload: RequestHandler = async (req, res) => {
       return;
     }
 
-    const mediaFile = files.media[0];
+    const mediaFiles = files.media || [];
     const thumbnailFile = files.thumbnail[0];
 
     const postId = Date.now().toString();
-    const mediaFileName = mediaFile.originalname || `${Date.now()}-media`;
     const thumbnailFileName = `thumbnail-${Date.now()}`;
 
     try {
-      const mediaUrl = await uploadMediaFile(
-        postId,
-        mediaFileName,
-        mediaFile.buffer,
-        mediaFile.mimetype || "application/octet-stream",
-      );
+      const mediaFileNames: string[] = [];
+
+      for (let i = 0; i < mediaFiles.length; i++) {
+        const mediaFile = mediaFiles[i];
+        const mediaFileName =
+          mediaFile.originalname || `${Date.now()}-media-${i}`;
+
+        await uploadMediaFile(
+          postId,
+          mediaFileName,
+          mediaFile.buffer,
+          mediaFile.mimetype || "application/octet-stream",
+        );
+
+        mediaFileNames.push(mediaFileName);
+      }
 
       const thumbnailUrl = await uploadMediaFile(
         postId,
@@ -57,7 +66,7 @@ export const handleUpload: RequestHandler = async (req, res) => {
         country: country || "",
         city: city || "",
         server: server || "",
-        mediaFiles: [mediaFileName],
+        mediaFiles: mediaFileNames,
         createdAt: new Date().toISOString(),
       };
 
