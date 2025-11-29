@@ -206,9 +206,7 @@ export default function UppostPanel() {
         throw new Error("Failed to delete post");
       }
 
-      setPosts((prevPosts) =>
-        prevPosts.filter((post) => post.id !== postId),
-      );
+      setPosts((prevPosts) => prevPosts.filter((post) => post.id !== postId));
     } catch (error) {
       console.error("Error deleting post:", error);
       alert("Failed to delete post. Please try again.");
@@ -570,7 +568,10 @@ export default function UppostPanel() {
           </form>
 
           {/* Delete Posts Section */}
-          <div className="mt-16 animate-fadeIn" style={{ animationDelay: "0.3s" }}>
+          <div
+            className="mt-16 animate-fadeIn"
+            style={{ animationDelay: "0.3s" }}
+          >
             <h2 className="text-3xl md:text-4xl font-black mb-8">
               🗑️ Manage Posts
             </h2>
