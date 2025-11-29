@@ -248,19 +248,25 @@ export const handleUpload: RequestHandler = async (req, res, next) => {
         responseSent = true;
       }
     } catch (r2Error) {
-      console.error("R2 upload error:", r2Error);
       const errorMessage =
         r2Error instanceof Error ? r2Error.message : String(r2Error);
+      console.error(
+        `[${new Date().toISOString()}] ❌ R2 upload error for post ${postId}:`,
+        errorMessage,
+      );
       console.error("Detailed R2 error:", {
         error: errorMessage,
         stack: r2Error instanceof Error ? r2Error.stack : undefined,
         postId,
+        mediaCount: files.media ? files.media.length : 0,
       });
       if (!res.headersSent) {
         res.status(500).json({
-          error: `Upload to R2 failed: ${errorMessage}`,
+          error: "Upload to R2 failed",
           details:
-            process.env.NODE_ENV === "development" ? errorMessage : undefined,
+            process.env.NODE_ENV === "development"
+              ? errorMessage
+              : "Failed to upload files to storage. Please check your server configuration.",
         });
         responseSent = true;
       }
