@@ -3,6 +3,7 @@ import cors from "cors";
 import multer from "multer";
 import { handleDemo } from "./routes/demo";
 import { handleUpload } from "./routes/upload";
+import { handleGenerateUploadUrls } from "./routes/generate-upload-urls";
 import { handleGetPosts } from "./routes/posts";
 import { handleGetServers } from "./routes/servers";
 import {
