@@ -286,7 +286,7 @@ export default function UppostPanel() {
           city: city || "",
           server: server || "",
           nsfw: nsfw,
-          thumbnailUrl: thumbnailPresignedUrl.signedUrl.split("?")[0], // Remove query params from URL
+          thumbnailFileName: thumbnailPresignedUrl.fileName,
           mediaFiles: mediaFileNames,
           isTrend: isTrend,
           trendRank: isTrend ? trendRank : "",
